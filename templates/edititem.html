@@ -1,0 +1,30 @@
+
+
+{% include "header.html" %}
+<h1 class="header">Edit Item</h1>
+<form action="{{url_for('editItem', categories_id=categories_id, items_id=items_id, item=editedItem)}}"
+  method="POST">
+  <p>Name:</p>
+  <input type="text" size="30" name="name2" placeholder = '{{item.name}}'>
+  <p>Description:</p>
+  <input type="text" size="90"  name="description2" placeholder = '{{item.description}}'>
+
+  <!--
+  <p>Select hairstyles:</p>
+  <select name="categories_id2">
+    <option value="" selected="selected"></option>
+    <option value=1 >Hairstyles for women</option>
+    <option value=2 >Hairstyles for men</option>
+    <option value=3 >Bridal HeadPieces</option>
+  </select>
+  -->
+
+  </br></br>
+  <input type="submit" value ="Update">
+  <a href = "{{url_for('showItem',categories_id=categories_id, items_id=items_id)}}"><button type="button">Cancel</button></a>
+  </br></br>
+</form>
+</body>
+{% include "footer.html" %}
+</html>
+ 

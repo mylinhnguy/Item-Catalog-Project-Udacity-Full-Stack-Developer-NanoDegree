@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+  </head>
+  <body >    
+
+    <div class="inline login">
+          {%if 'username' not in session %}
+          <a class="button" href="{{url_for('showLogin')}}">Login </a>
+          {% else %}
+          <a class="button" href="{{url_for('disconnect')}}">Logout </a>
+          {% endif %}
+    </div>
+
+    <header style="background-color: #d2f3f3;" >          
+      <h1 class="inline"><a href = "{{url_for('showCatalog')}}" style="color:black">HairStyles Catalog</a> </h1>
+    </header>   
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash">
+      {% for message in messages %}
+      <h2><strong>{{message}}</strong></h2>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+  </body>  
+  </html>

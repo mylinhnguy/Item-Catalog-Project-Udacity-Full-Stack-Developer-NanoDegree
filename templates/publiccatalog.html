@@ -1,0 +1,26 @@
+{% include "header.html" %}
+<nav class="minheight">
+  <h2>Categories</h2>
+  <ul>
+    {% for i in categories2 %}
+    <li>
+      <a href = "{{url_for('showCategories', categories_id = i.id)}}" style="color:black">{{i.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<article class="maxheight">
+  <h2>Latest Items</h2>
+  <ul>
+    {% for i in items2 %}
+    <li>
+      <a href = "{{url_for('showItem',categories_id=i.categories_id, items_id=i.id)}}"style="color:black">{{i.name}} - {{i.categories.name}}</a>
+    </li>
+    {% endfor %}
+
+  </ul>  
+</article>
+</body>
+
+</html>

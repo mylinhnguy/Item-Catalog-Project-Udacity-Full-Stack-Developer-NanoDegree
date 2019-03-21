@@ -1,0 +1,17 @@
+<html>
+{% include "header.html" %}
+<body>
+<div class="item">
+
+  <h2 class="inline"><a href = "{{url_for('showCategories', categories_id=categories2.id)}}" style="color:black">{{categories2.name}}</a></h2> 
+  <h2 style="font-style: italic; color: #ffd480;; ">{{items2.name}}</h2>
+  <h3 class="description">{{items2.description}}</h3> 
+  <img src={{items2.url_image}} alt="" width="300" height="300">
+    
+  <a href = "{{url_for('editItem', categories_id=categories2.id, items_id=items2.id)}}" style="color:red">Edit</a>
+  <a href = "{{url_for('deleteItem', categories_id=categories2.id, items_id=items2.id)}}" style="color:red">Delete</a>  
+  </br> </br>
+</div>
+</body>
+{% include "footer.html" %}
+</html>

@@ -1,0 +1,21 @@
+{% include "header.html" %}
+<h1 class="header">New Item</h1>
+<form action="{{url_for('newItem')}}" method="POST">
+  <p>Name:</p>
+  <input type="text" size="40" name="name2">
+  <p>description:</p>
+  <input type="text" size="40" name="description2">
+  <p>Service:</p>
+  <select name="categories_id2">
+    <option value=1 >Hairstyles for women</option>
+    <option value=2 >Hairstyles for men</option>
+    <option value=3 >Bridal HeadPiece</option>    
+  </select>
+  </br></br>
+  <input type="submit" value ="Create">
+  <a href = "{{url_for('showCatalog')}}"><button type="button">Cancel</button></a>
+  </br></br>
+</form>
+</body>
+{% include "footer.html" %}
+</html>
