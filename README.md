@@ -31,30 +31,30 @@ Properly implementing authentication mechanisms and appropriately mapping HTTP m
 
 ## Project Structure 
 
-```
+  ```
            
-        |-- project.py 
-        |-- client_secrets.json
-        |-- database_setup.py 
-        |-- lotsofitems.py
-        |-- catalog.db 
-        |-- LICENSE 
-        |-- README.md 
-        |-- /static 
-            |-- style.css 
-        |-- /Templates 
-            |-- catalog.html 
-            |-- category.html 
-            |-- deleteitem.html
-            |-- edititem.html 
-            |-- footer.html 
-            |-- header.html 
-            |-- item.html
-            |-- login.html 
-            |-- newitem.html 
-            |-- publiccatalog.html
-            |-- publicitem.html 
-```
+  |-- project.py 
+  |-- client_secrets.json
+  |-- database_setup.py 
+  |-- lotsofitems.py
+  |-- catalog.db 
+  |-- LICENSE 
+  |-- README.md 
+  |-- /static 
+      |-- style.css 
+  |-- /Templates 
+      |-- catalog.html 
+      |-- category.html 
+      |-- deleteitem.html
+      |-- edititem.html 
+      |-- footer.html 
+      |-- header.html 
+      |-- item.html
+      |-- login.html 
+      |-- newitem.html 
+      |-- publiccatalog.html
+      |-- publicitem.html 
+    ```
 
 ## Setting up OAuth2.0 using Google Login
 
