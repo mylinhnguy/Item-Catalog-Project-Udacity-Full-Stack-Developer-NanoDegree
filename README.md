@@ -31,8 +31,7 @@ Properly implementing authentication mechanisms and appropriately mapping HTTP m
 
 ## Project Structure 
 
-  ```
-           
+```          
   |-- project.py 
   |-- client_secrets.json
   |-- database_setup.py 
@@ -54,7 +53,7 @@ Properly implementing authentication mechanisms and appropriately mapping HTTP m
       |-- newitem.html 
       |-- publiccatalog.html
       |-- publicitem.html 
-    ```
+```
 
 ## Setting up OAuth2.0 using Google Login
 
