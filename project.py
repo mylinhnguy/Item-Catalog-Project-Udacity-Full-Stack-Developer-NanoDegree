@@ -11,13 +11,14 @@ from oauth2client.client import FlowExchangeError
 import httplib2
 from flask import make_response
 import requests
+import os
 
 app = Flask(__name__)
-CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+CLIENT_ID = json.loads(open('client_secrets.json', 'r').read())['web']['client_id']
+
 APPLICATION_NAME = "Beauty Application"
 
-engine = create_engine('sqlite:///category.db')
+engine = create_engine('sqlite:///catalog.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
